@@ -1,4 +1,4 @@
-=== Social Share === 
+# === Social Share === 
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: https://dinapal.tech
 Tags: comments, spam
