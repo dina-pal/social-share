@@ -15,11 +15,4 @@ jQuery(document).ready(function ($) {
             }
         }
     );
-
-    $(".post_item").each(function () {
-        if ($(".post-type-box").is(":checked")) {
-            $isChecked = $(".position-box:checked").length;
-            console.log($isChecked);
-        }
-    });
 });

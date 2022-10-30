@@ -71,11 +71,16 @@
     justify-content: space-between;
     border-radius: 5px;
     margin-bottom: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.social_icon:hover {
+    border: 1px solid #002eaf;
 }
 
 .social_icon.active {
     border: 1px solid #002eaf;
-
+    background-color: #ffffff;
 }
 
 .social_icon [class^="icon-"],

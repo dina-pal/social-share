@@ -18,28 +18,24 @@ $fields = array(
 		'type' => 'checkbox',
 		'icon' => 'icon-facebook',
 	),
-
 	array(
 		'label' => __('Twitter', 'custom-social-share'),
 		'id' => 'css_twitter',
 		'type' => 'checkbox',
 		'icon' => 'icon-twitter',
 	),
-
 	array(
 		'label' => __('Pinterest', 'custom-social-share'),
 		'id' => 'css_pinterest',
 		'type' => 'checkbox',
 		'icon' => 'icon-pinterest',
 	),
-
 	array(
 		'label' => __('Linkedin','custom-social-share'),
 		'id' => 'css_linkedin',
 		'type' => 'checkbox',
 		'icon' => 'icon-linkedin2',
 	),
-
 	array(
 		'label' => __('Whatsapp','custom-social-share'),
 		'id' => 'css_whatsapp',
