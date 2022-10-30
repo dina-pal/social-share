@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?c7rlk9');
+    src: url('fonts/icomoon.eot?c7rlk9#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?c7rlk9') format('truetype'),
+        url('fonts/icomoon.woff?c7rlk9') format('woff'),
+        url('fonts/icomoon.svg?c7rlk9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-next:before {
+    content: "\ea24";
+}
+
+.icon-facebook:before {
+    content: "\ea90";
+}
+
+.icon-whatsapp:before {
+    content: "\ea93";
+}
+
+.icon-twitter:before {
+    content: "\ea96";
+}
+
+.icon-linkedin2:before {
+    content: "\eaca";
+}
+
+.icon-pinterest:before {
+    content: "\ead1";
+}
+
+.social-share-form .form-table th {
+    display: none;
+}
+
+.social-share-form .form-table td {
+    padding: 5px 10px;
+}
+
+.social_icon img {
+    width: 20px;
+}
+
+.social_icon {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    border: 1px solid #acacac;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.social_icon.active {
+    border: 1px solid #002eaf;
+
+}
+
+.social_icon [class^="icon-"],
+[class*=" icon-"] {
+    font-size: 25px;
+}
+
+.icon-facebook {
+    color: #43609c;
+}
+
+.icon-twitter {
+    color: #1da1f2;
+}
+
+.icon-pinterest {
+    color: #C92228;
+}
+
+.icon-whatsapp {
+    color: #34AF23;
+}
+
+.social_icon label {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 8px;
+}
+
+.social_icon input {
+    margin-top: unset;
+}
+
+.social_fields-wrap {
+    display: flex;
+    padding-right: 10px;
+}
+
+.social_icons {
+    flex: 1;
+}
+
+.post_item-title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.post_item-title label {
+    font-size: 20px;
+    display: block;
+    flex: 1;
+    padding: 5px 10px;
+}
+
+.post_item {
+    border: 1px solid #b4b4b4;
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.position_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.position_item label {
+    padding: 3px 5px;
+    width: 100%;
+}
+
+.position_item {
+    display: none;
+}
+
+.position_item.active {
+    display: flex !important;
+}
