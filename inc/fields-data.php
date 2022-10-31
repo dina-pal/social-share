@@ -5,6 +5,11 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+/**
+ * This function create social media fields for admin.
+ * @param $fields Array Social media data fields
+ * @return void
+ */
 function social_icons_lists($fields){
 	$css_social_items = get_option('css_social_items');
 	$value = 0;
@@ -36,8 +41,14 @@ function social_icons_lists($fields){
 	}
 }
 
-function post_types_selection($positions){
 
+/**
+ *  This function is responsible for create Options for posts.
+ * @param $positions Array get Positions where we want to add the social media icons.
+ * @return void
+ *
+ */
+function post_types_selection($positions){
 	$s_post_types = get_option('css_supported_post_type');
 	$field_options = get_option('css_post_type_options');
 	$checked = 0;

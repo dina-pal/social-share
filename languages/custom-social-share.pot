@@ -1,0 +1,82 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Social Share\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-31 05:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.3; wp-6.0.3\n"
+"X-Domain: custom-social-share"
+
+#: inc/option-page.php:50
+msgid "After the post content"
+msgstr ""
+
+#: inc/option-page.php:47
+msgid "Below the post title"
+msgstr ""
+
+#. Author of the plugin
+msgid "Dinabandhu Pal"
+msgstr ""
+
+#: inc/option-page.php:14
+msgid "Facebook"
+msgstr ""
+
+#: inc/option-page.php:48
+msgid "Floating on the left area"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://dinapal.tech"
+msgstr ""
+
+#: inc/option-page.php:49
+msgid "Inside The Feature Image"
+msgstr ""
+
+#: inc/option-page.php:32
+msgid "Linkedin"
+msgstr ""
+
+#: inc/option-page.php:26
+msgid "Pinterest"
+msgstr ""
+
+#: inc/option-page.php:70
+msgid "Select Post Type you want to add Share Buttons"
+msgstr ""
+
+#: inc/option-page.php:61
+msgid "Select Social Icons"
+msgstr ""
+
+#: inc/option-page.php:80
+msgid "Shortcode for Social Share"
+msgstr ""
+
+#. Name of the plugin
+msgid "Social Share"
+msgstr ""
+
+#. Description of the plugin
+msgid "The Custom Plugin for Content Social Share"
+msgstr ""
+
+#: inc/option-page.php:20
+msgid "Twitter"
+msgstr ""
+
+#: inc/option-page.php:38
+msgid "Whatsapp"
+msgstr ""

@@ -8,13 +8,18 @@ if ( ! defined( 'WPINC' ) ) {
 add_action('wp_enqueue_scripts', 'css_enqueue_scripts');
 add_action( 'admin_enqueue_scripts', 'css_admin_enqueue_scripts' );
 
+
+/**
+ * Include Scripts for frontend of the website.
+ * @return void
+ */
 	function css_enqueue_scripts(){
 		wp_enqueue_style('css-front-css', plugin_dir_url(__DIR__).'assets/style.css', null, CSS_VERSION );
 		wp_enqueue_script('css-front-scripts',plugin_dir_url(__DIR__).'assets/scripts.js', array('jquery'), CSS_VERSION, true);
 	}
 
 	/**
-	 * @param $screen Custom Screen
+	 * @param $screen which page we want to load the scripts
 	 *
 	 * @return void
 	 */

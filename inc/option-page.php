@@ -4,10 +4,8 @@
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
-
-
 ?>
-<h1><?php echo esc_html('Custom Social Share'); ?></h1>
+<h1><?php echo __('Custom Social Share', 'custom-social-share'); ?></h1>
 
 <?php 
 
@@ -39,7 +37,7 @@ $fields = array(
 	array(
 		'label' => __('Whatsapp','custom-social-share'),
 		'id' => 'css_whatsapp',
-		'desc' => 'Whatsapp only work on Mobile devices',
+		'desc' => __('Whatsapp only work on Mobile devices','custom-social-share'),
 		'type' => 'checkbox',
 		'icon' => 'icon-whatsapp',
 	)
@@ -62,13 +60,20 @@ require_once plugin_dir_path(__FILE__).'fields-data.php';
         <div class="social_icons col-1">
             <h2><?php echo __('Select Social Icons', 'custom-social-share'); ?></h2>
 		    <?php
+            /**
+             * Here we will display the Social media icons list.
+             */
 		    social_icons_lists($fields);
 		    ?>
         </div>
         <div class="social_icons col-2">
             <h2><?php echo __('Select Post Type you want to add Share Buttons', 'custom-social-share'); ?></h2>
             <div class="post_items">
-				<?php post_types_selection($positions); ?>
+				<?php
+                /**
+                 * Here we will display the post types selection and position point
+                 */
+                post_types_selection($positions); ?>
 			</div>
         </div>
 		<div class="social_icons col-3">

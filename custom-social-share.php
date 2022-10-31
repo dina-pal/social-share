@@ -19,7 +19,7 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'CSS_VERSION', '1.0.0' );
 
 // Initialized the plugin
-add_action('plugin_loaded', 'css_load_textdomain');
+add_action('plugins_loaded', 'css_load_textdomain');
 add_action( 'admin_menu', 'css_create_settings' );
 add_action('admin_post_social_icons_save', 'save_social_share_post');
 add_action('admin_post_nopriv_social_icons_save', 'save_social_share_post');
@@ -29,11 +29,11 @@ require_once plugin_dir_path(__FILE__) .'inc/enqueue_scripts.php';
 require_once plugin_dir_path(__FILE__) .'public/css-shortcode.php';
 require_once plugin_dir_path(__FILE__) .'public/show-in-frontend.php';
 
-
+// add admin menu page for managing the plugin actions.
 function css_create_settings(){
 	$GLOBALS['social-share'] = add_menu_page(
-		__('Social Share', ' custom-social-share'),
-		__('Social Share', ' custom-social-share'),
+		__('Social Share', 'custom-social-share'),
+		__('Social Share', 'custom-social-share'),
 		'manage_options',
 		'social-share',
 		'css_settings_content',
@@ -42,14 +42,17 @@ function css_create_settings(){
 	);
 }
 
+//The content option for admin managing page
 function css_settings_content(){
 	require_once plugin_dir_path(__FILE__) .'inc/option-page.php';
 }
 
 function css_load_textdomain(){
-	load_plugin_textdomain('custom-social-share', false, plugin_dir_path(__FILE__). 'languages');
+	 load_plugin_textdomain('custom-social-share', false,  dirname( plugin_basename( __FILE__ ) ) .'/languages/');
 }
 
+
+// Save the setting data in database.
 function save_social_share_post(){
 	$items = [];
 	$post_types = [];
