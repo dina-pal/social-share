@@ -24,7 +24,7 @@ add_action( 'admin_menu', 'css_create_settings' );
 add_action('admin_post_social_icons_save', 'save_social_share_post');
 add_action('admin_post_nopriv_social_icons_save', 'save_social_share_post');
 
-// Include Scripts Files
+// Include require Files Files
 require_once plugin_dir_path(__FILE__) .'inc/enqueue_scripts.php';
 require_once plugin_dir_path(__FILE__) .'public/css-shortcode.php';
 require_once plugin_dir_path(__FILE__) .'public/show-in-frontend.php';

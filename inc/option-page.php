@@ -67,13 +67,14 @@ require_once plugin_dir_path(__FILE__).'fields-data.php';
         </div>
         <div class="social_icons col-2">
             <h2><?php echo __('Select Post Type you want to add Share Buttons', 'custom-social-share'); ?></h2>
-            <?php post_types_selection($positions); ?>
+            <div class="post_items">
+				<?php post_types_selection($positions); ?>
+			</div>
         </div>
-        <div class="social_icons col-2">
-            <h2><?php echo __('Shortcode for Social Share', 'custom-social-share'); ?></h2>
-            <input type="text" readonly value="[css_social_share]" size="30" onclick="this.select();
-" />
-        </div>
+		<div class="social_icons col-3">
+			<h2><?php echo __('Shortcode for Social Share', 'custom-social-share'); ?></h2>
+            <input type="text" readonly value="[css_social_share]" size="30" onclick="this.select();" />
+		</div>
 
     </div>
 	<input type="hidden" name="action" value="social_icons_save">

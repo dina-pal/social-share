@@ -15,4 +15,17 @@ jQuery(document).ready(function ($) {
             }
         }
     );
+
+    // Add Active class on check social icons
+    $(".social_icons .social_icon").each(function () {
+        let checkbox = $(this).find('input[type="checkbox"]');
+        checkbox.on("click", function () {
+            var checked = $(this).is(":checked");
+            if (checked) {
+                $(this).closest(".social_icon").addClass("active");
+            } else {
+                $(this).closest(".social_icon").removeClass("active");
+            }
+        });
+    });
 });

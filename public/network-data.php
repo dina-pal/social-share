@@ -8,12 +8,11 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * @param $title String Post Title
  * @param $url String Post Url
- * @param $content String Post Content
  * @param $network String Social network Name
  *
  * @return false|string Return the social icon
  */
-function css_social_networks($title='', $url ='' , $content = '', $network = '') {
+function css_social_networks($title='', $url ='' , $network = '') {
 	switch ($network){
 		case 'css_facebook':
 			return sprintf('
@@ -22,8 +21,8 @@ function css_social_networks($title='', $url ='' , $content = '', $network = '')
 			break;
 		case 'css_twitter':
 			return sprintf('
-				<a class="twitter_share css_share_icon" href="https://twitter.com/intent/tweet?url=%s&text=%s" target="_blank">
-				<span class="%s"></span></a>', $url, $title , 'icon-twitter' );
+				<a class="twitter_share css_share_icon" target="_blank" href="https://twitter.com/intent/tweet?url=%s&text=%s">
+				<span class="%s"></span></a>', $url, wp_trim_words(esc_html($title)) , 'icon-twitter' );
 			break;
 		case 'css_pinterest':
 			return sprintf('

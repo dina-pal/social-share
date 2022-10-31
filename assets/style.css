@@ -81,7 +81,6 @@ a.css_share_icon img {
 }
 
 a.css_share_icon {
-    padding: 10px;
     border: 1px solid #9e9e9e;
     background: #ebebeb;
     text-align: center;
@@ -114,7 +113,12 @@ a.css_share_icon:hover {
     width: 48px !important;
     z-index: 1;
 }
-
+.float-left-share:hover .nav_icon{
+    background-color: #cccccc;
+}
+.float-left-share:hover span.icon-next {
+    color: #000;
+}
 .float-left-share * {
     transition: all .2s ease-in-out;
 }
@@ -137,12 +141,25 @@ a.css_share_icon:hover {
     justify-content: center;
     margin-bottom: 0px;
     margin-top: 6px;
-    background: #c1c1c1;
+    background: rgb(0 0 0 / 3%);
     padding: 8px 0;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 5px 5px 0;
     height: 24px;
     cursor: pointer;
     align-items: center;
+    transition: all .2s ease-in;
+}
+
+.nav_icon:hover {
+    background: #cccccc;
+}
+
+.nav_icon:hover>span.icon-next {
+    color: #000;
+}
+
+span.icon-next {
+    color: rgb(0 0 0 / 30%);
 }
 
 .css_social_items.hide {
@@ -157,4 +174,10 @@ a.css_share_icon:hover {
 
 .nav_icon.hide span {
     transform: rotate(0);
+}
+[class^="related"]  .css_social_items,
+[class*=" related"]  .css_social_items,
+[id*="related"]  .css_social_items,
+[id*=" related"]  .css_social_items{
+    display: none !important;
 }

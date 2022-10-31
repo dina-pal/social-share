@@ -2,9 +2,9 @@
     font-family: 'icomoon';
     src: url('fonts/icomoon.eot?c7rlk9');
     src: url('fonts/icomoon.eot?c7rlk9#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?c7rlk9') format('truetype'),
-        url('fonts/icomoon.woff?c7rlk9') format('woff'),
-        url('fonts/icomoon.svg?c7rlk9#icomoon') format('svg');
+    url('fonts/icomoon.ttf?c7rlk9') format('truetype'),
+    url('fonts/icomoon.woff?c7rlk9') format('woff'),
+    url('fonts/icomoon.svg?c7rlk9#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -115,6 +115,19 @@
 
 .social_icon input {
     margin-top: unset;
+}
+.social_icon p {
+    position: absolute;
+    top: 33px;
+    font-size: 12px;
+    left: 0;
+    display: none;
+}
+.social_icon.active p{
+    display:block;
+}
+.social_icon {
+    position: relative;
 }
 
 .social_fields-wrap {

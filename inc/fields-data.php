@@ -22,6 +22,7 @@ function social_icons_lists($fields){
             <label for="%s"> %s
                 <input id="%s" name="css_social_items[]" type="checkbox" value="%s" %s >
             </label>
+            %s
         </div>',
 			$value === 1 ? 'active' : '',
 			$field['icon'],
@@ -30,6 +31,7 @@ function social_icons_lists($fields){
 			$field['id'],
 			$field['id'],
 			$value === 1 ? 'checked' : '',
+            isset($field['desc'] ) ? '<p>'.$field['desc'].'</p>': '',
 		);
 	}
 }
