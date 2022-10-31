@@ -23,7 +23,7 @@ function css_social_share_options(){
 	$data =  '<div class="css_social_items">';
 	for ($i = 0; $i< $length; $i++){
 		$net = $networks[$i];
-		$data .= css_social_networks($title, $url, $content, $net );
+		$data .= css_social_networks($title, $url, $net );
 	}
 	$data .= "</div>";
 	echo $data;

@@ -175,9 +175,14 @@ span.icon-next {
 .nav_icon.hide span {
     transform: rotate(0);
 }
+
 [class^="related"]  .css_social_items,
 [class*=" related"]  .css_social_items,
 [id*="related"]  .css_social_items,
 [id*=" related"]  .css_social_items{
+    display: none !important;
+}
+[id*="comment"]  .css_social_items,
+[id*=" comment"]  .css_social_items{
     display: none !important;
 }

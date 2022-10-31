@@ -19,9 +19,12 @@ class ShowInFrontend{
 		$this->networks = get_option('css_social_items');
 		add_filter('the_content', array($this, 'css_add_social_share_below_the_content'));
 		add_filter('the_content', array($this, 'css_add_social_share_left_side'));
-		add_filter('the_title', array($this, 'css_add_social_share_after_title'), 10, 3);
+		add_filter('the_content', array($this, 'css_add_social_share_avobe_the_content'), 999);
+		add_filter('the_excerpt', array($this, 'css_add_social_share_avobe_the_excerpt'), 999);
 		add_filter( 'post_thumbnail_html', array($this,'css_add_social_icon_inside_featured_image'), 10, 3 );
+
 	}
+
 	/**
 	 * This is the helper function get all selected social network.
 	 * @param $networks Array get the selected networks array
@@ -62,6 +65,48 @@ class ShowInFrontend{
 			return $content;
 	}
 
+  	/**
+	 * @param $content String Get Current Content
+	 *
+	 * @return mixed|string Modified Content
+	 */
+	public function  css_add_social_share_avobe_the_content($content){
+			foreach ($this->post_types as $post_type){
+				if( (is_archive() || is_home() || is_singular()) && $post_type === get_post_type()){
+					if(isset($this->options) && !$this->options == ''){
+						if(in_array('below_title', $this->options[$post_type] ) && in_the_loop()){
+                            $rnContent = $this->css_get_social_icons(get_the_ID() );
+							$rnContent .= $content;
+							return $rnContent;
+						}
+					}
+				}
+			}
+			return $content;
+	}
+
+  	/**
+	 * @param $content String Get Current Content
+	 *
+	 * @return mixed|string Modified Content
+	 */
+	public function  css_add_social_share_avobe_the_excerpt($excerpt){
+			foreach ($this->post_types as $post_type){
+				if( (is_archive() || is_home() ) && $post_type === get_post_type()){
+					if(isset($this->options) && !$this->options == ''){
+						if(in_array('below_title', $this->options[$post_type] ) && in_the_loop()){
+                            $rnContent = $this->css_get_social_icons(get_the_ID() );
+							$rnContent .= $excerpt;
+							return $rnContent;
+						}
+					}
+				}
+			}
+			return $excerpt;
+	}
+
+
+
 	/**
 	 * @param $content String Get Current Content
 	 *
@@ -69,9 +114,9 @@ class ShowInFrontend{
 	 */
 	public function  css_add_social_share_after_title($title, $url){
 			foreach ($this->post_types as $post_type){
-				if( is_singular() && $post_type === get_post_type()){
+				if( (is_archive() || is_home()) && in_the_loop() && $post_type === get_post_type()){
 					if(isset($this->options) && !$this->options == ''){
-						if(in_array('below_title', $this->options[$post_type] ) && in_the_loop()){
+						if(in_array('below_title', $this->options[$post_type] )){
                             $networks = get_option('css_social_items');
 							$reTitle = $title;
                             $reTitle .= "<div class='css_social_items'>";
